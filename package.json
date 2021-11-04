@@ -1,0 +1,19 @@
+{
+  "name": "graphql-react-events-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camcaro/graphql-react-events-manager.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camcaro/graphql-react-events-manager/issues"
+  },
+  "homepage": "https://github.com/camcaro/graphql-react-events-manager#readme"
+}
