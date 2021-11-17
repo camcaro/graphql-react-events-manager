@@ -21,6 +21,7 @@ app.use('/graphql', graphqlHTTP({
             description: String!
             price: Float!
             date: String!
+            creator: User!
         }
 
         type User {
@@ -58,16 +59,17 @@ app.use('/graphql', graphqlHTTP({
     rootValue: {
         events: () => {
             return Event.find()
-                .then(events => {
-                    return events.map(event => {
-                        console.log(event._doc._id.toString()); // No need to parse like this at below return
-                        return { ...event._doc };
+                .populate('creator')
+                    .then(events => {
+                        return events.map(event => {
+                            console.log(event._doc._id.toString()); // No need to parse like this at below return
+                            return { ...event._doc };
+                        });
+                    })
+                    .catch(err => {
+                        console.log(err);
+                        throw(err);
                     });
-                })
-                .catch(err => {
-                    console.log(err);
-                    throw(err);
-                });
         },
         createEvent: args => {
             const event = new Event({
