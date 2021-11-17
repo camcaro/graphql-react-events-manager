@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/camcaro/graphql-react-events-manager/compare/v2.0.0...v2.0.1) (2021-11-17)
+
+
+### Bug Fixes
+
+* add creator to Event type in graphql schema ([5a934cd](https://github.com/camcaro/graphql-react-events-manager/commit/5a934cd2f8bbaafd38b6f1ee8c447b8890e35a22))
+
 ## 2.0.0 (2021-11-15)
 
 
