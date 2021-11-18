@@ -3,6 +3,9 @@ const bcrypt = require('bcryptjs');
 const Event = require('../../models/event.js'); 
 const User = require('../../models/user.js');
 
+const convertDate = obj => {
+    return new Date(obj._doc.date).toISOString();
+};
 
 const events = eventIds => {
     return Event.find({ _id: { $in: eventIds}})
@@ -10,6 +13,7 @@ const events = eventIds => {
             return events.map(event => {
                 return { 
                     ...event._doc,
+                    date: convertDate(event),
                     creator: user.bind(this, event._doc.creator)
                 };
             });
@@ -41,6 +45,7 @@ module.exports = {
                         //console.log("event id: " + event._doc._id.toString()); // No need to parse like this at below return
                         return { 
                             ...event._doc,
+                            date: convertDate(event),
                             creator: user.bind(this, event._doc.creator)
                         };
                     });
@@ -62,7 +67,11 @@ module.exports = {
         return event
             .save()
             .then(result => {
-                createdEvent = { ...result._doc, creator: user.bind(this, result._doc.creator) };
+                createdEvent = { 
+                    ...result._doc,
+                    date: convertDate(result),
+                    creator: user.bind(this, result._doc.creator) 
+                };
                 return User.findById('618ade5925183b056c5af594')
             })
             .then(user => {
