@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.2](https://github.com/camcaro/graphql-react-events-manager/compare/v2.0.1...v2.0.2) (2021-11-19)
+
+
+### Bug Fixes
+
+* add events and user funtions to dynamically populate references ([3dd3e84](https://github.com/camcaro/graphql-react-events-manager/commit/3dd3e848d9ecfaf9f3056730c472f6e65e9483ad))
+* add function to convert dates to readable format ([3c1dd80](https://github.com/camcaro/graphql-react-events-manager/commit/3c1dd80ab5546d1be87121dbf6c9b506d60c3c15))
+
 ### [2.0.1](https://github.com/camcaro/graphql-react-events-manager/compare/v2.0.0...v2.0.1) (2021-11-17)
 
 
