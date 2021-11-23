@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/camcaro/graphql-react-events-manager/compare/v2.0.2...v2.1.0) (2021-11-23)
+
+
+### Features
+
+* add bookings referenced to user and event ([8dade32](https://github.com/camcaro/graphql-react-events-manager/commit/8dade327502b1c1de7afff06fcb89b1adc4bc904))
+
 ### [2.0.2](https://github.com/camcaro/graphql-react-events-manager/compare/v2.0.1...v2.0.2) (2021-11-19)
 
 
