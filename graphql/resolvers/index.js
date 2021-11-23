@@ -149,5 +149,19 @@ module.exports = {
 		} catch (err) {
 			throw err;
 		}
+	},
+	cancelBooking: async args => {
+		try {
+			const booking = await Booking.findById(args.bookingId).populate("event");
+			const event = {
+				...booking.event._doc,
+				date: convertDate(booking.event._doc.date),
+				creator: user.bind(this, booking.event._doc.creator)
+			};
+			await Booking.deleteOne(booking);
+			return event;
+		} catch (err) {
+			throw err;
+		}
 	}
 };
